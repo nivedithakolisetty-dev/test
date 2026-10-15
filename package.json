@@ -1,0 +1,23 @@
+{
+  "name": "gemini-chatbox-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack Gemini LLM Chatbox with separated frontend and backend architectures",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js",
+    "backend": "cd backend && npm start",
+    "migrate": "node backend/migrate.js",
+    "db:migrate": "node backend/migrate.js",
+    "install:all": "cd backend && npm install"
+  },
+  "keywords": [
+    "gemini",
+    "ai",
+    "chatbox",
+    "llm",
+    "express",
+    "vanilla-js"
+  ],
+  "author": "",
+  "license": "MIT"
+}
