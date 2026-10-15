@@ -9,7 +9,9 @@ class FrontendEnv {
       SUPABASE_URL: localStorage.getItem('supabase_url') || '',
       SUPABASE_ANON_KEY: localStorage.getItem('supabase_anon_key') || '',
       BACKEND_URL: localStorage.getItem('backend_url') || (
-        window.location.origin.includes('5000') ? window.location.origin : 'http://localhost:5000'
+        (typeof window !== 'undefined' && window.location.protocol.startsWith('http'))
+          ? window.location.origin
+          : 'http://localhost:5000'
       )
     };
   }

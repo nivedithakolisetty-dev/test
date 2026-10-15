@@ -4,9 +4,10 @@
  * Also integrates Supabase conversation persistence endpoints.
  */
 
-const DEFAULT_BACKEND_URL = window.location.origin.includes('localhost:5000') || window.location.origin.includes('127.0.0.1:5000')
+const DEFAULT_BACKEND_URL = (typeof window !== 'undefined' && window.location.protocol.startsWith('http'))
   ? window.location.origin
   : 'http://localhost:5000';
+
 
 class GeminiApiClient {
   constructor() {

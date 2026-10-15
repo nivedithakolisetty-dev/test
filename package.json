@@ -8,7 +8,9 @@
     "backend": "cd backend && npm start",
     "migrate": "node backend/migrate.js",
     "db:migrate": "node backend/migrate.js",
-    "install:all": "cd backend && npm install"
+    "build": "npm --prefix backend install",
+    "postinstall": "npm --prefix backend install",
+    "install:all": "npm --prefix backend install"
   },
   "keywords": [
     "gemini",
